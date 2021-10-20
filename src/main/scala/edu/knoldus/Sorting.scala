@@ -2,6 +2,7 @@ package edu.knoldus
 class Sorting {
 
   def insertionSort(array: Array[Int]): Array[Int] = {
+
     val size = array.length
     for (step <- 1 until size) {
       val key = array(step)

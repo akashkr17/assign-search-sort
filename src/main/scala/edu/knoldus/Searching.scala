@@ -8,16 +8,17 @@ class Searching {
     def binarySearchHelper(array: Array[Int],
                            elem: Int,
                            low: Int,
-                           high: Int): Boolean = if (low > high) { false }
-                           else {
-                             val middle = low + (high - low) / 2
-                             array match {
-                               case array if array(middle) == elem => true
-                               case array if array(middle) < elem => binarySearchHelper(array, elem, middle + 1, high)
-                               case array if array(middle) > elem =>
-                                 binarySearchHelper(array, elem, low, middle - 1)
-                             }
-                           }
+                           high: Int): Boolean =
+      if (low > high) { false } else {
+        val middle = low + (high - low) / 2
+        array match {
+          case array if array(middle) == elem => true
+          case array if array(middle) < elem =>
+            binarySearchHelper(array, elem, middle + 1, high)
+          case array if array(middle) > elem =>
+            binarySearchHelper(array, elem, low, middle - 1)
+        }
+      }
     binarySearchHelper(array, elem, 0, array.length - 1)
   }
 
