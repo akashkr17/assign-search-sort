@@ -1,26 +1,32 @@
-# Scala Assignment 01
+## Searching And Sorting
+#### Introduction
+This project is used to sort an array and search an element in the given array using different techniques.
 
-## Steps to Submit
 
-1. Clone this project
-2. Run command `git init`
-3. Create your owner repository on GitHub
-4. Execute Following commands and push your code on that repository.
+#### Requirements
+###### 1.Scala 2.13.5
+###### 2.sbt 1.5.5
+
+#### Commands
+##### clean
+
+This command cleans the sbt project by deleting the target directory. The command output relevant messages.
 
 ```bash
-git remote add origin <Your Repository>
-git branch -M main
-git push -u origin main
+sbt clean 
+```
+##### compile 
+This command compiles the scala source classes of the sbt project.
+```bash
+sbt compile
 ```
 
-## Description
+##### tests
 
-There are two files `edu.knoldus.Searching` and `edu.knoldus.Sorting`. You have to complete the implementation in those file. In order to test your code execute command `sbt test`.
-
-Make sure of the following things:
-1. Don't make any changes in `test` files
-2. Don't use `var` or immutable variables
-3. Run `sbt scalastyle` and make sure there are no `errors/warnings/info`
-4. If you have any questions please ask your mentors.
-
-### Good Luck, Have fun
+```bash
+sbt test
+```
+#### Library dependencies
+###### 1.scalastyle
+###### 2.scalafmt
+###### 2.scalatest
